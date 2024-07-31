@@ -1,4 +1,5 @@
 
+# Quick start
 ## Install python
 
 To download Python, head to the [official Python website](https://www.python.org/downloads/) and download the latest version.
@@ -7,7 +8,7 @@ To download Python, head to the [official Python website](https://www.python.org
 
 ### Windows
 
-Enroll system variable (Change in `{}`)
+Set system variable (Change in `{}`)
 ```
 setx Path C:\Users\{twili}\AppData\Local\Programs\Python\Python{312}
 setx Path C:\Users\{twili}\AppData\Local\Programs\Python\Python{312}\Scripts
@@ -38,3 +39,28 @@ pip install python-dotenv
 ```bash
 python .\test_completion.py
 ```
+
+# Testcase
+## imageGeneration
+상세 가이드 없음
+
+## embeddings
+1. Registry setting to enable long paths
+    transformers 설치 시 선 작업 필요(관리자권한)
+    ```bash
+    New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+    ```
+
+2. Install library
+    ```bash
+    pip install pandas
+    pip install ticktoken
+    pip install utils
+    pip install transformers
+    pip install plotly
+    pip install matplotlib
+    pip install scikit-learn
+    pip install torch
+    pip install torchvision
+    pip install scipy
+    ```

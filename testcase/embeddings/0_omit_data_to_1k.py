@@ -2,7 +2,7 @@ import sqlite3
 import csv
 
 # SQLite 데이터베이스 파일 경로
-database_file = 'database.sqlite'
+database_file = 'data/database.sqlite'
 
 # 연결 및 커서 생성
 conn = sqlite3.connect(database_file)
@@ -20,7 +20,7 @@ column_names = [description[0] for description in cursor.description]
 conn.close()
 
 # CSV 파일로 데이터 저장
-csv_file = 'reviews_output.csv'
+csv_file = 'data/fine_food_reviews_1k.csv'
 with open(csv_file, mode='w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
 
