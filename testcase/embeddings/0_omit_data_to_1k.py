@@ -1,6 +1,8 @@
 import sqlite3
 import csv
 
+## 
+
 # SQLite 데이터베이스 파일 경로
 database_file = 'data/database.sqlite'
 
@@ -9,7 +11,7 @@ conn = sqlite3.connect(database_file)
 cursor = conn.cursor()
 
 # 테이블에서 최대 1000개의 데이터 조회
-query = "SELECT * FROM Reviews LIMIT 1000"
+query = "SELECT * FROM Reviews LIMIT 10"
 cursor.execute(query)
 rows = cursor.fetchall()
 
@@ -20,7 +22,7 @@ column_names = [description[0] for description in cursor.description]
 conn.close()
 
 # CSV 파일로 데이터 저장
-csv_file = 'data/fine_food_reviews_1k.csv'
+csv_file = 'data/fine_food_reviews_10.csv'
 with open(csv_file, mode='w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
 

@@ -54,8 +54,7 @@ python .\test_completion.py
 2. Install library
     ```bash
     pip install pandas
-    pip install ticktoken
-    pip install utils
+    pip install tiktoken
     pip install transformers
     pip install plotly
     pip install matplotlib
@@ -63,4 +62,5 @@ python .\test_completion.py
     pip install torch
     pip install torchvision
     pip install scipy
+    pip install ipython
     ```
