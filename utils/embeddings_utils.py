@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from openai import OpenAI
 import numpy as np
+
 load_dotenv()
 client = OpenAI()
 

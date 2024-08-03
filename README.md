@@ -41,12 +41,10 @@ python .\test_completion.py
 ```
 
 # Testcase
-## imageGeneration
-상세 가이드 없음
 
 ## embeddings
-1. Registry setting to enable long paths
-    transformers 설치 시 선 작업 필요(관리자권한)
+1. Registry setting to enable long paths(Windws OS)
+    Prerequisites before installing transformers - Requires administrator privileges
     ```bash
     New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
     ```
@@ -63,4 +61,4 @@ python .\test_completion.py
     pip install torchvision
     pip install scipy
     pip install ipython
-    ```
+    ```    

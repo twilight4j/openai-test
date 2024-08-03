@@ -3,9 +3,9 @@ import ast  # for converting embeddings saved as strings back to arrays
 from scipy import spatial  # for calculating vector similarities for search
 from IPython.display import display
 from dotenv import load_dotenv
-load_dotenv()
-
 from openai import OpenAI
+
+load_dotenv()
 client = OpenAI()
 
 EMBEDDING_MODEL = "text-embedding-3-small"
@@ -48,7 +48,9 @@ def strings_ranked_by_relatedness(
 
 
 # examples
-strings, relatednesses = strings_ranked_by_relatedness("Vegetarians", df, top_n=5)
+user_query = 'Vegetarians'
+
+strings, relatednesses = strings_ranked_by_relatedness(user_query, df, top_n=5)
 for string, relatedness in zip(strings, relatednesses):
     print(f"{relatedness=:.3f}")
     display(string)
