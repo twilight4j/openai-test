@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
-from openai import OpenAI
-
 load_dotenv()
+
+from openai import OpenAI
 client = OpenAI()
 
 REVIEW = "Title: cookies!; Content: these cookies are really good. i love oatmeal, and i love soft-baked cookies. so i definitely love these. they're really healthy and good to take on the go because they come in individual packs."
